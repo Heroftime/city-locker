@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# City Lockers - Luggage Tracker
+
+A simple web application to track luggage items and their destinations. Built with Next.js, React, and TypeScript.
+
+## Features
+
+- Add luggage items with name and destination
+- List all luggage items
+- Delete luggage items
+- Data persistence using localStorage
+- Loading animations for better UX
+- Responsive design with Tailwind CSS
+
+## Prerequisites
+
+- Node.js 18.0 or higher
+- npm or yarn package manager
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd city-locker
+```
 
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/              # Next.js app directory
+├── components/       # React components
+├── context/          # React Context providers
+├── hooks/            # Custom React hooks
+└── types/            # TypeScript type definitions
+```
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- Next.js 14
+- React 18
+- TypeScript
+- Tailwind CSS
+- React Icons
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Development
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The application uses:
+- Functional components with React Hooks
+- React Context for state management
+- Local storage for data persistence
+- CSS-in-JS with Tailwind CSS
+- TypeScript for type safety
 
-## Deploy on Vercel
+## Testing the Application
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Adding Items**:
+   - Enter an item name (e.g., "Suitcase")
+   - Enter a destination (e.g., "New York")
+   - Click "Add Luggage Item"
+   - You should see a loading animation while the item is being added
+   - The item should appear in the list below
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Viewing Items**:
+   - All added items will be displayed in the list
+   - Each item shows its name and destination
+
+3. **Deleting Items**:
+   - Click the trash icon next to any item
+   - You should see a loading animation while the item is being deleted
+   - The item should be removed from the list
+
+4. **Data Persistence**:
+   - Refresh the page
+   - Your items should still be there (they're stored in localStorage)
+
+5. **Error Handling**:
+   - Try to add an item with empty fields
+   - You should see an error message
+
+## Deployment
+
+To build the application for production:
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+To start the production server:
+
+```bash
+npm run start
+# or
+yarn start
+```
+
+You can deploy this application to platforms like Vercel, Netlify, or GitHub Pages.
+
+## License
+
+This project is open source and available under the MIT License.
