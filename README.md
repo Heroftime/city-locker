@@ -20,7 +20,7 @@ A simple web application to track luggage items and their destinations. Built wi
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone [<repository-url>](https://github.com/Heroftime/city-locker)
 cd city-locker
 ```
 
